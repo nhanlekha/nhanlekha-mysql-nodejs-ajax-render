@@ -4,11 +4,11 @@ const mysql = require("mysql2");
 
 // Tạo pool kết nối cho MySQL
 const pool = mysql.createPool({
-  host: process.env.DB_HOST, 
-  user: process.env.DB_USERNAME, 
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DBNAME,  
-  port: process.env.PORT,           
+  host: "bkbstr3e5egx0xkb0x9n-mysql.services.clever-cloud.com", 
+  user: "ujrk19spwplso5ot", 
+  password: "zgxpCN9luoW6gluFWXjN",
+  database: "bkbstr3e5egx0xkb0x9n",  
+  port: 3306,           
   connectionLimit: 10
 });
 
