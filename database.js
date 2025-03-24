@@ -1,14 +1,15 @@
 // database.js (MySQL version)
+require('dotenv').config();
 
 const mysql = require("mysql2");
 
 // Tạo pool kết nối cho MySQL
 const pool = mysql.createPool({
-  host: "bkbstr3e5egx0xkb0x9n-mysql.services.clever-cloud.com", 
-  user: "ujrk19spwplso5ot", 
-  password: "zgxpCN9luoW6gluFWXjN",
-  database: "bkbstr3e5egx0xkb0x9n",  
-  port: 3306,           
+  host: process.env.MYSQL_ADDON_HOST, 
+  user: process.env.MYSQL_ADDON_USER, 
+  password: process.env.MYSQL_ADDON_PASSWORD,
+  database: process.env.MYSQL_ADDON_DB,  
+  port: process.env.MYSQL_ADDON_PORT || 3306,
   connectionLimit: 10
 });
 
