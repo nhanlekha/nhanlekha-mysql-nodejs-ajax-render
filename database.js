@@ -1,13 +1,14 @@
 // database.js (MySQL version)
+
 const mysql = require("mysql2");
 
 // Tạo pool kết nối cho MySQL
 const pool = mysql.createPool({
-  host: process.env.DB_HOST, 
-  user: process.env.DB_USERNAME, 
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DBNAME,  
-  port:  process.env.PORT,                 // cổng mặc định của MySQL
+  host: "localhost",          // hoặc host của MySQL server
+  user: "root",       // thay bằng tên user của bạn
+  password: "",   // thay bằng mật khẩu
+  database: "testdatabase",   // tên database
+  port: 3306,                 // cổng mặc định của MySQL
   connectionLimit: 10
 });
 
