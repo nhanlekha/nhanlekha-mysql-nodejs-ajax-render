@@ -4,7 +4,7 @@ const axios = require("axios");
 // Hàm gọi API
 async function fetchData() {
     try {
-      const response = await axios.post("http://localhost:3000/sample_data/action", { action: 'fetch' });
+      const response = await axios.post("https://nhanlekha-mysql-nodejs-ajax-render.onrender.com/sample_data/action", { action: 'fetch' });
       console.log("Dữ liệu nhận được:", response.data);
     } catch (error) {
       console.error("Lỗi khi gọi API:", error.message);
