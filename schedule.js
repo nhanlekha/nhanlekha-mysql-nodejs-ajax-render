@@ -11,7 +11,7 @@ async function fetchData() {
     }
 
     try {
-      const response2 = await axios.get("https://nhan-n8n.onrender.com");
+      const response2 = await axios.get("https://nhan-n8n-chatbot.onrender.com/");
       console.log("Dữ liệu nhận được từ n8n");
     } catch (error) {
       console.error("Lỗi khi gọi API:", error.message);
